@@ -11,6 +11,7 @@ public class Test : AuditableEntity, IAggregateRoot
 
     public string Name { get; set; }
     public TestType TestType { get; set; }
+    public DateTime TestAt { get; set; }
     public Test()
     { }
     public Test(string name, TestType testType)

@@ -15,7 +15,7 @@ public static class ConfigureServices
         services.AddTransient(typeof(IRepository<>), typeof(EfRepository<>));
         services.AddTransient(typeof(IReadRepository<>), typeof(EfRepository<>));
         // Use for Domaint Events
-        services.AddTransient<IMediator, Mediator>();
+        services.AddTransient<IMediator, Mediator>( );
         services.AddTransient<IDomainEventDispatcher, DomainEventDispatcher>();
         services.AddMediatR(config => config.RegisterServicesFromAssemblies(GetAssemblies(callingAssembly)));
 

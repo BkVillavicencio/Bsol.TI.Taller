@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using Bsol.TI.Taller.Core.Aggregates.Cuentas;
 using Bsol.TI.Taller.Core.Aggregates.Test;
 using Bsol.TI.Taller.SharedKernel;
 using Bsol.TI.Taller.SharedKernel.Audit;
@@ -26,6 +27,7 @@ public class AppDbContext : DbContext
     }
     //User For Audits
 
+    public DbSet<Account> Accounts { get; set; }
     public DbSet<Test> Tests { get; set; }
     public DbSet<Audit> Audits { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
